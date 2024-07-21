@@ -15,7 +15,17 @@
     <div id="tglcnt" style="width: 120px;height: 40px;background-image: url(Image1.png);margin-top: 10px;">
 
     </div><hr>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <h3>Animated Toggle..</h3>
+    <button id="anitglbtn">ANIMATED TOGGLE</button>
+    <div id="anitglcnt" style="width: 140px;height: 40px;background-image: url(Image1.png);margin-top: 10px;">
+
+    </div><br>
+    <button id="fdtglbtn">ANIMATED TOGGLE - FADE</button>
+    <div id="fdtglcnt" style="width: 140px;height: 40px;background-image: url(Image1.png);margin-top: 10px;">
+
+    </div>
+    <hr>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
             $("#btn").click(function(){
@@ -32,6 +42,12 @@
             })
             $("#tglbtn").click(function(){
                 $("#tglcnt").toggle()
+            })
+            $("#anitglbtn").click(function(){
+                $("#anitglcnt").toggle(3000)
+            })
+            $("#fdtglbtn").click(function(){
+                $("#fdtglcnt").fadeToggle(3000)
             })
         })
     </script>
