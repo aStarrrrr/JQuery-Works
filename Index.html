@@ -12,7 +12,7 @@
 
     </div><hr>
     <button id="tglbtn">TOGGLE BUTTON</button>
-    <div id="tglcnt" style="width: 120px;height: 40px;background-image: url(Image1.png);margin-top: 10px;">
+    <div id="tglcnt" style="width: 128px;height: 40px;background-image: url(Image1.png);margin-top: 10px;">
 
     </div><hr>
     <h3>Animated Toggle..</h3>
@@ -21,10 +21,13 @@
 
     </div><br>
     <button id="fdtglbtn">ANIMATED TOGGLE - FADE</button>
-    <div id="fdtglcnt" style="width: 140px;height: 40px;background-image: url(Image1.png);margin-top: 10px;">
+    <div id="fdtglcnt" style="width: 188px;height: 40px;background-image: url(Image1.png);margin-top: 10px;">
 
     </div>
     <hr>
+    <input type="text" id="inp1" placeholder="Enter more than 3 letters"><br>
+    <label id="error" style="color: red;font-size: 11px;font-family: monospace; display: none;">Please enter minimum 4 digits</label><br><br>
+    <input type="text" id="inp2"><hr>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
@@ -48,6 +51,15 @@
             })
             $("#fdtglbtn").click(function(){
                 $("#fdtglcnt").fadeToggle(3000)
+            })
+            $("#inp1").blur(function(){
+                var text=$(this).val()
+                if(text.length<4){
+                    // alert("Enter minimum characters")
+                    $("#error").show()
+                }else{
+                    $("#error").hide()
+                }
             })
         })
     </script>
