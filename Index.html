@@ -6,7 +6,15 @@
     <title>Homepage</title>
 </head>
 <body>
-    <button id="btn">Click Here</button>
+    <button id="btn">CLICK HERE</button><hr>
+    <button id="hdbtn">HIDING BUTTON</button>
+    <div id="hdcnt" style="width: 120px;height: 40px;background-image: url(Image1.png);margin-top: 10px;">
+
+    </div><hr>
+    <button id="tglbtn">TOGGLE BUTTON</button>
+    <div id="tglcnt" style="width: 120px;height: 40px;background-image: url(Image1.png);margin-top: 10px;">
+
+    </div><hr>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
@@ -18,6 +26,12 @@
             })
             $("#btn").mouseleave(function(){
                 $(this).css({"background":"red"})
+            })
+            $("#hdbtn").click(function(){
+                $("#hdcnt").hide()
+            })
+            $("#tglbtn").click(function(){
+                $("#tglcnt").toggle()
             })
         })
     </script>
